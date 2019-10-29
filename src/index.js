@@ -1,10 +1,13 @@
+
 import React from 'react';
+
 import { render } from 'react-dom';
-import App from './componets/app';
+
+import App from './components/App';
+
+import './style/app.scss';
 
 
-import './styles/app.scss';
 
 
-
-render(<App />, document.getElementById(app));
+render(<App />, document.getElementById('app'));

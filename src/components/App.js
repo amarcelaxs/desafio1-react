@@ -1,44 +1,93 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import Header from './header';
-import Post from './post';
 
-export default class App extends Component{
+
+import Header from './Header';
+
+import Post from './Post';
+
+
+
+export default class App extends Component {
+
   state = {
-    post: [
+
+    posts: [
+
       {
-        id:1,
-        nome:'Diego Schell Fernandes',
-        avatar:'https://avatars0.githubusercontent.com/u/2254731?s=460&v=4',
-        tempo:'há 3 min',
-        body:'Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss deixa as pessoas mais interessantis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! '
+
+        id: 1,
+
+        name: 'Diego Fernandes',
+
+        avatar: 'https://avatars0.githubusercontent.com/u/2254731?s=460&v=4',
+
+        time: 'há 3 min',
+
+        body:
+
+          'Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis',
+
+      },
+
+      {
+
+        id: 2,
+
+        name: 'Rocketseat',
+
+        avatar: 'https://avatars0.githubusercontent.com/u/2254731?s=460&v=4',
+
+        time: 'há 30 min',
+
+        body:
+
+          'Pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.',
+
       },
       {
-        id:2,
-        nome:'Rubia Savolksi',
-        avatar:'https://avatars0.githubusercontent.com/u/2254731?s=460&v=4',
-        tempo:'há 30 min',
-        body:'Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Sapien in monti palavris qui num significa nadis i pareci latim. Quem manda na minha terra sou euzis! '
+
+        id: 2,
+
+        name: 'Rocketseat',
+
+        avatar: 'https://avatars3.githubusercontent.com/u/11263400?s=400&u=cd6884c5242ff1552edff6a01ba753f9f32d5bb7&v=4,',
+
+        time: 'há 30 min',
+
+        body:
+
+          'Pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.',
+
       },
-      {
-        id:3,
-        nome:'Rubia Savolksi',
-        avatar:'https://avatars0.githubusercontent.com/u/2254731?s=460&v=4',
-        tempo:'há 30 min',
-        body:'Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Sapien in monti palavris qui num significa nadis i pareci latim. Quem manda na minha terra sou euzis! '
-      },
+
+
     ],
+
   };
 
-  render(){
-    const {post} = this.state;
+
+
+  render() {
+
+    const { posts } = this.state;
+
     return (
-      <div className="post-container">
+
+      <div>
+
         <Header />
-        <div>
-          {post && post.map( post => <Post key={post.id} data={post} />)}
+
+        <div className="post-container">
+
+          {posts && posts.map(post => <Post key={post.id} data={post} />)}
+
         </div>
+
       </div>
+
     );
+
   }
+
 }

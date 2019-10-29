@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import postHeader from './postHeader';
+import PostHeader from './PostHeader';
 
 const Post = ({ data}) => (
   <div className="post" >
-    <postHeader avatar={data.avatar} name={data.name} time={data.time} />
+    <PostHeader avatar={data.avatar} name={data.name} time={data.time} />
     <p>{data.body}</p>
   </div>
 );
